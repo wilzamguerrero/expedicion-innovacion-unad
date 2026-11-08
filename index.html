@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Expedición Innovación UNAD</title>
+<link rel="stylesheet" href="css/style.css?v=mw0aaca3">
+</head>
+<body>
+<canvas id="c" aria-label="Mundo 3D de la expedición"></canvas>
+
+<header id="hud" hidden>
+  <div class="brand"><b>Expedición</b> Innovación UNAD<span id="team"></span></div>
+  <div class="stats">
+    <div class="stat"><span class="lbl">Logros</span><span id="lgCount">0/24</span></div>
+    <div class="stat"><span class="lbl">Medallas</span><span id="medCount">0/5</span></div>
+    <div class="stat"><span class="lbl">Centros activados</span><span id="centers">0/72</span></div>
+  </div>
+  <div class="frags" id="frags" aria-label="Fragmentos del mensaje"></div>
+</header>
+
+<div id="progress" hidden><div id="bar"></div></div>
+
+<aside id="panel" hidden>
+  <button id="close" aria-label="Cerrar">×</button>
+  <div id="panelBody"></div>
+</aside>
+
+<div id="toast" hidden></div>
+
+<div id="gogo" hidden>
+  <button id="gogoAv" aria-label="GOGO, tu guía (toca para abrir o cerrar)"><img src="img/gogo.webp" alt="GOGO"><video id="gogoVid" muted loop playsinline preload="none" aria-hidden="true"><source src="img/gogo-habla.webm" type="video/webm"><source src="img/gogo-habla.mp4" type="video/mp4"></video></button>
+  <div id="gogoBub"><b>GOGO</b><p id="gogoTxt"></p></div>
+</div>
+
+<footer id="foot" hidden>
+  <span>Arrastra para girar · rueda o pellizco para acercar · toca los puntos brillantes</span>
+  <span class="tools">
+    <button id="btnLogros" title="Mis logros">Mis logros</button>
+    <button id="btnMap" title="Vista general del archipiélago">Mapa</button>
+    <button id="btnExport" title="Descarga el registro de eventos">Registro (CSV)</button>
+    <button id="btnReset" title="Reinicia el progreso">Reiniciar</button>
+  </span>
+</footer>
+
+<div id="intro">
+  <div class="card">
+    <p class="kicker">Taller sincrónico nacional</p>
+    <h1>Expedición Innovación UNAD</h1>
+    <p>Cinco mundos, una etapa de la innovación en cada uno. Toca los puntos brillantes, supera las misiones, cruza los puentes y reúne los fragmentos del mensaje final.</p>
+    <p id="lgWho" class="small" style="color:var(--gold)"></p>
+    <div id="loginBox" class="loginbox" hidden><input id="lgCod" placeholder="Código del equipo (ej. EQ-001)" autocomplete="off" autocapitalize="characters"><input id="lgPin" placeholder="PIN del relator" inputmode="numeric" autocomplete="off" type="password"><p id="lgErr" class="lgerr"></p></div>
+    <button id="start" class="primary">Comenzar la misión</button>
+    <p class="small">Idea de «motor de la innovación» inspirada en <i>Verne · Tools to Innovate</i> (2015).</p>
+    <p class="small">Versión de estructura · contenido provisional editable en js/data.js</p>
+  </div>
+</div>
+
+<div id="end" hidden>
+  <div class="card">
+    <p class="kicker">Misión completada</p>
+    <h2 id="endMsg"></h2>
+    <p id="endSign" class="small"></p>
+    <div id="endStats"></div>
+    <div id="endLogros"></div>
+    <div id="survey"></div>
+    <button id="endClose" class="primary">Seguir explorando</button>
+  </div>
+</div>
+
+<script src="js/data.js?v=mw0aaca3"></script>
+<script src="js/juego.bundle.js?v=libre1"></script>
+<script src="js/dev-unlock.js?v=libre1"></script>
+</body>
+</html>
